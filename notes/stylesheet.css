@@ -1,0 +1,51 @@
+html,body{
+height:100%;width:100%;margin:0;}
+
+#container,#result{
+	max-width: 600px;
+	padding: 15px;
+	margin: 15px;
+	border-style: solid;
+	border-color: black;
+	float: left;
+}
+
+#container input{
+	margin-top:20px;
+	border-bottom-color: #26a69a;
+}
+
+#container label{
+	color: #26a69a;
+}
+
+#container .s4{
+	float: right;
+}
+
+#main{
+max-width: 1060px;
+margin-left: auto;
+margin-right: auto;
+overflow: hidden;
+}
+
+
+
+@media only screen and (min-width: 1100px) {
+	#result{width: 470px;}
+}
+
+@media only screen and (max-width: 1100px) {
+	#result,#container{
+		float:none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (max-width: 630px) {
+	#result,#container{
+	margin: 15px;
+	}
+}
