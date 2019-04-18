@@ -1,33 +1,31 @@
 function calculez(){
 
-	var tc1=document.getElementById('tc1').value;
-	var tc1p=document.getElementById('tc1p').value;
+	var tc1=Number(document.getElementById('tc1').value);
+	var tcp=Number(document.getElementById('tcp').value);
 
-	var tc2=document.getElementById('tc2').value
-	var tc2p=document.getElementById('tc2p').value;
+	var tc2=Number(document.getElementById('tc2').value);
 
-	var partiel=document.getElementById('partiel').value;
-	var partielp=document.getElementById('partielp').value;
 
-	var presence=document.getElementById('presence').value;
-	var presencep=document.getElementById('presencep').value;
+	var partiel=Number(document.getElementById('partiel').value);
+	var partielp=Number(document.getElementById('partielp').value);
 
-	var tc1=(tc1/20)*tc1p;
-	var tc2=(tc2/20)*tc2p;
+	var presence=Number(document.getElementById('presence').value);
+	var presencep=Number(document.getElementById('presencep').value);
+
+	var tc=(tc1+tc2)/2;
+	tc=(tc/20)*tcp;
 	var partiel=(partiel/20)*partielp;
 	var presence=(presence/20)*presencep;
 
-document.getElementById('tc1rp').textContent=tc1p;
-document.getElementById('tc2rp').textContent=tc2p;
+document.getElementById('tcrp').textContent=tcp;
 document.getElementById('partielrp').textContent=partielp;
 document.getElementById('presencerp').textContent=presencep;
 
-document.getElementById('tc1r').textContent=tc1;
-document.getElementById('tc2r').textContent=tc2;
+document.getElementById('tcr').textContent=tc;
 document.getElementById('partielr').textContent=partiel;
 document.getElementById('presencer').textContent=presence;
 
-var note=tc1+tc2+partiel+presence;
+var note=tc+partiel+presence;
 document.getElementById('note100').textContent=note;
 document.getElementById('note20').textContent=note/5;
 
