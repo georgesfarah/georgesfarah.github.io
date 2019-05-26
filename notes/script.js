@@ -29,7 +29,8 @@ var note=tc+partiel+presence;
 document.getElementById('note100').textContent=note;
 document.getElementById('note20').textContent=note/5;
 
-var manquee=(10-note/5)*(20/8);
+z=(1-((tcp+partielp+presencep)/100))*20
+var manquee=(10-note/5)*(20/z);
 if(manquee>0){
 document.getElementById('manque').innerHTML="Il vous manque encore "+manquee.toFixed(3)+" sur 20 sur votre final!";
 document.getElementById('manque').style.color="red";
