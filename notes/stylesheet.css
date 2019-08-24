@@ -10,18 +10,18 @@ height:100%;width:100%;margin:0;}
 	float: left;
 }
 
-#container input{
-	margin-top:20px;
-	border-bottom-color: #26a69a;
-}
-
-#container label{
-	color: #26a69a;
-}
-
-#container .s4{
-	float: right;
-}
+/* label color */
+ .input-field label {
+	 color: #26a69a !important;
+ }
+ /* label focus color */
+ .input-field input:focus + label {
+	 color: #26a69a !important;
+ }
+ /* label underline focus color */
+ .input-field input:focus {
+	 border-color:#26a69a !important;
+ }
 
 #main{
 max-width: 1060px;
