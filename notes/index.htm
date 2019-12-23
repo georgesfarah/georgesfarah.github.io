@@ -1,93 +1,95 @@
-
 <!DOCTYPE html>
 
 <html>
-	<head>
-		<title></title>
 
-		 <meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<head>
+	<title></title>
 
-<link rel="stylesheet" type="text/css" href="materialize.min.css">
-<SCRIPT TYPE="text/javascript" src="materialize.min.js" ></SCRIPT>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-<SCRIPT TYPE="text/javascript" src="script.js" ></SCRIPT>
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="materialize.min.css">
+	<SCRIPT TYPE="text/javascript" src="materialize.min.js"></SCRIPT>
 
-	</head>
-	<body>
+	<SCRIPT TYPE="text/javascript" src="script.js"></SCRIPT>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 
-<div id="main">
+</head>
 
-<div id="container">
-	 <div class="row">
-        <div class="col s6" style="text-align: center;">Votre note sur 20 </div>
-        <div class="col s4 offset-s2" style="text-align: center;">Pourcentage </div>
-        </div>
+<body>
 
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="tc1" type="number" class="validate">
-          <label for="tc1">TC1</label>
-        </div>
-        <div class="input-field col s4 offset-s2">
-          <input id="tcp" type="number" class="validate valid" value="25">
-          <label for="tcp">%TC</label>
-        </div>
-        </div>
+	<div id="main">
 
-       <div class="row">
-        <div class="input-field col s6">
-          <input id="tc2" type="number" class="validate">
-          <label for="tc2">TC2</label>
-        </div>
+		<div id="container">
+			<div class="row">
+				<div class="col s6" style="text-align: center;">Votre note sur 20 </div>
+				<div class="col s4 offset-s2" style="text-align: center;">Pourcentage </div>
+			</div>
 
-        </div>
+			<div class="row">
+				<div class="input-field col s6">
+					<input id="tc1" type="number" class="validate" step="0.01">
+					<label for="tc1">TC1</label>
+				</div>
+				<div class="input-field col s4 offset-s2">
+					<input id="tcp" type="number" class="validate valid" value="25">
+					<label for="tcp">%TC</label>
+				</div>
+			</div>
 
-	 <div class="row">
-        <div class="input-field col s6">
-          <input id="partiel" type="number" class="validate">
-          <label for="partiel">Partiel</label>
-        </div>
-        <div class="input-field col s4 offset-s2">
-          <input id="partielp" type="number" class="validate valid" value="25">
-          <label for="partielp">%Partiel</label>
-        </div>
-        </div>
+			<div class="row">
+				<div class="input-field col s6">
+					<input id="tc2" type="number" class="validate" step="0.01">
+					<label for="tc2">TC2</label>
+				</div>
 
+			</div>
 
-
-       <div class="row">
-        <div class="input-field col s6">
-          <input id="presence" type="number" class="validate">
-          <label for="presence">Presence</label>
-        </div>
-        <div class="input-field col s4 offset-s2">
-          <input id="presencep" type="number" class="validate valid" value="10">
-          <label for="presencep">%Presence</label>
-        </div>
-        </div>
-	<div class="row" style="text-align: center;"><a class="waves-effect waves-light btn" onclick="calculez()">Calculez</a></div>
+			<div class="row">
+				<div class="input-field col s6">
+					<input id="partiel" type="number" class="validate" step="0.01">
+					<label for="partiel">Partiel</label>
+				</div>
+				<div class="input-field col s4 offset-s2">
+					<input id="partielp" type="number" class="validate valid" value="25">
+					<label for="partielp">%Partiel</label>
+				</div>
+			</div>
 
 
-</div>
+
+			<div class="row">
+				<div class="input-field col s6">
+					<input id="presence" type="number" class="validate" step="0.01">
+					<label for="presence">Presence</label>
+				</div>
+				<div class="input-field col s4 offset-s2">
+					<input id="presencep" type="number" class="validate valid" value="10">
+					<label for="presencep">%Presence</label>
+				</div>
+			</div>
+			<div class="row" style="text-align: center;"><a class="waves-effect waves-light btn" onclick="calculez()">Calculez</a></div>
 
 
-<div id="result" style="margin-bottom: 330px;">
-	<div class="row">Vos Notes:</div>
-	<div>Note totale en TC sur <span id="tcrp"></span>: <span id="tcr"></span></div>
-	<div>Note totale en Partiel sur <span id="partielrp"></span>: <span id="partielr"></span></div>
-	<div class="row">Note totale en Presence sur <span id="presencerp"></span>: <span id="presencer"></span></div>
+		</div>
 
-	<div>Note Generale jusqu'à present sur 100: <span id="note100"></span></div>
-	<div class="row">Note Generale jusqu'à present sur 20: <span id="note20"></span></div>
 
-	<div class="row" id="manque"></div>
+		<div id="result" style="margin-bottom: 330px;">
+			<div class="row">Vos Notes:</div>
+			<div>Note totale en TC sur <span id="tcrp"></span>: <span id="tcr"></span></div>
+			<div>Note totale en Partiel sur <span id="partielrp"></span>: <span id="partielr"></span></div>
+			<div class="row">Note totale en Presence sur <span id="presencerp"></span>: <span id="presencer"></span></div>
 
-</div>
+			<div>Note Generale jusqu'à present sur 100: <span id="note100"></span></div>
+			<div class="row">Note Generale jusqu'à present sur 20: <span id="note20"></span></div>
 
-</div>
+			<div class="row" id="manque"></div>
+
+		</div>
+
+	</div>
 
 </body>
-	</body>
-	</html>
+</body>
+
+</html>
