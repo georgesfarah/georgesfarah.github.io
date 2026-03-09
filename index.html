@@ -4,7 +4,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Georges Farah - Software Engineer</title>
-        <meta name="description" content="Software Engineer based in Paris. Connect with me on LinkedIn, GitHub, Instagram, or reach out via email." />
+        <meta
+            name="description"
+            content="Software Engineer based in Paris. Connect with me on LinkedIn, GitHub, Instagram, or reach out via email."
+        />
         <meta name="author" content="Georges Farah" />
         <link rel="canonical" href="https://georgesfarah.github.io/" />
 
@@ -12,15 +15,33 @@
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://georgesfarah.github.io/" />
         <meta property="og:title" content="Georges Farah - Software Engineer" />
-        <meta property="og:description" content="Software Engineer based in Paris. Connect with me on LinkedIn, GitHub, Instagram, or reach out via email." />
-        <meta property="og:image" content="https://georgesfarah.github.io/profile.jpg" />
+        <meta
+            property="og:description"
+            content="Software Engineer based in Paris. Connect with me on LinkedIn, GitHub, Instagram, or reach out via email."
+        />
+        <meta
+            property="og:image"
+            content="https://georgesfarah.github.io/profile.jpg"
+        />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://georgesfarah.github.io/" />
-        <meta property="twitter:title" content="Georges Farah - Software Engineer" />
-        <meta property="twitter:description" content="Software Engineer based in Paris. Connect with me on LinkedIn, GitHub, Instagram, or reach out via email." />
-        <meta property="twitter:image" content="https://georgesfarah.github.io/profile.jpg" />
+        <meta
+            property="twitter:url"
+            content="https://georgesfarah.github.io/"
+        />
+        <meta
+            property="twitter:title"
+            content="Georges Farah - Software Engineer"
+        />
+        <meta
+            property="twitter:description"
+            content="Software Engineer based in Paris. Connect with me on LinkedIn, GitHub, Instagram, or reach out via email."
+        />
+        <meta
+            property="twitter:image"
+            content="https://georgesfarah.github.io/profile.jpg"
+        />
 
         <style>
             :root {
@@ -28,7 +49,9 @@
                 --text: #121212;
                 --maxw: 420px;
                 --phone-bg: #000000;
-                --phone-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2);
+                --phone-shadow:
+                    0 20px 60px rgba(0, 0, 0, 0.3),
+                    0 8px 16px rgba(0, 0, 0, 0.2);
                 --link-bg: rgba(255, 255, 255, 0.08);
                 --link-border: rgba(255, 255, 255, 0.15);
                 --link-hover-bg: rgba(255, 255, 255, 0.12);
@@ -43,7 +66,6 @@
                     --maxw: 800px;
                 }
             }
-
 
             * {
                 box-sizing: border-box;
@@ -75,7 +97,9 @@
                 padding: 28px 18px 18px;
                 position: relative;
                 overflow: hidden;
-                transition: background 0.3s ease, box-shadow 0.3s ease;
+                transition:
+                    background 0.3s ease,
+                    box-shadow 0.3s ease;
             }
 
             .profile {
@@ -97,22 +121,23 @@
             }
 
             .avatar-wrapper::after {
-                content: '';
+                content: "";
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 right: 0;
                 height: clamp(180px, 35vw, 270px);
-                background: linear-gradient(to bottom,
+                background: linear-gradient(
+                    to bottom,
                     transparent 0%,
                     rgba(0, 0, 0, 0.3) 40%,
                     rgba(0, 0, 0, 0.7) 70%,
-                    rgba(0, 0, 0, 0.95) 100%);
+                    rgba(0, 0, 0, 0.95) 100%
+                );
                 pointer-events: none;
                 z-index: 1;
                 transition: background 0.3s ease;
             }
-
 
             .avatar {
                 width: 100%;
@@ -137,7 +162,9 @@
                 color: #ffffff;
                 text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
                 z-index: 2;
-                transition: color 0.3s ease, text-shadow 0.3s ease;
+                transition:
+                    color 0.3s ease,
+                    text-shadow 0.3s ease;
             }
 
             .subtitle {
@@ -365,6 +392,45 @@
         <script>
             document.getElementById("year").textContent =
                 new Date().getFullYear();
+        </script>
+
+        <script>
+            (function (h, o, u, n, d) {
+                h = h[d] = h[d] || {
+                    q: [],
+                    onReady: function (c) {
+                        h.q.push(c);
+                    },
+                };
+                d = o.createElement(u);
+                d.async = 1;
+                d.src = n;
+                d.crossOrigin = "";
+                n = o.getElementsByTagName(u)[0];
+                n.parentNode.insertBefore(d, n);
+            })(
+                window,
+                document,
+                "script",
+                "https://www.datadoghq-browser-agent.com/us1/v6/datadog-rum.js",
+                "DD_RUM",
+            );
+
+            window.DD_RUM.onReady(function () {
+                window.DD_RUM.init({
+                    applicationId: "6aa1929f-7a3a-42c3-9c85-ac6e8ca07129",
+                    clientToken: "pub8df3a213dd5938e47b8de5f8073b99af",
+                    site: "datadoghq.com",
+                    service: "georgesfarah.fr",
+                    env: "prod",
+                    version: "1.0.0",
+                    sessionSampleRate: 100,
+                    sessionReplaySampleRate: 20,
+                    trackResources: true,
+                    trackUserInteractions: true,
+                    trackLongTasks: true,
+                });
+            });
         </script>
     </body>
 </html>
